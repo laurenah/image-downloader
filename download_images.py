@@ -9,10 +9,10 @@ parser = argparse.ArgumentParser(description="Download multiple images from a UR
                                             "This will save images named 'fish1.jpg', 'fish2.jpg' etc. into the folder where this file is executed")
 
 # add arguments
-parser.add_argument('url', metavar='U', type=str, help='the base URL - should follow this format: https://site/image_category/')
-parser.add_argument('img', metavar='i', type=str, help='the main image name/category - for example: animal, or person. This assumes the site hosts an image for each item given the item id')
-parser.add_argument('start', metavar='s', type=int, help='the starting id of the images to download, must be a positive integer, and less than the end argument')
-parser.add_argument('end', metavar='e', type=int, help='the ending id of the images to download, must be a positive integer, and greater than the start argument')
+parser.add_argument('-url', metavar='url', type=str, help='the base URL - should follow this format: https://site/image_category/')
+parser.add_argument('-img', metavar='img', type=str, help='the main image name/category - for example: animal, or person. This assumes the site hosts an image for each item given the item id')
+parser.add_argument('-start', metavar='start', type=int, help='the starting id of the images to download, must be a positive integer, and less than the end argument')
+parser.add_argument('-end', metavar='end', type=int, help='the ending id of the images to download, must be a positive integer, and greater than the start argument')
 
 # execute parse_args() method
 args = parser.parse_args()
